@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NoseThumb Clinician</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="top">
+      <span class="brand">NoseThumb</span>
+      <span id="who" class="who" hidden></span>
+      <button id="logout" class="link" hidden>Log out</button>
+    </header>
+
+    <!-- Shown when not logged in -->
+    <section id="login-view" class="card" hidden>
+      <h1>Clinician log in</h1>
+      <form id="login-form">
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="username" required>
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" required>
+        <p id="login-error" class="error" hidden></p>
+        <button type="submit" class="primary">Log in</button>
+      </form>
+    </section>
+
+    <!-- Shown when logged in -->
+    <section id="dashboard-view" hidden>
+      <div class="card">
+        <h1>Start a session</h1>
+        <p class="muted">Create a code and read it to your patient. They enter it in the NoseThumb app.</p>
+        <button id="new-session" class="primary">New session</button>
+        <div id="session" hidden>
+          <p class="muted">Session code</p>
+          <p id="code" class="code"></p>
+          <p id="expires" class="muted"></p>
+          <p id="status" class="status">Waiting for patient…</p>
+        </div>
+      </div>
+
+      <!-- Live data from the patient's phone -->
+      <div id="live" class="card" hidden>
+        <div class="call-row">
+          <button id="start-call" class="primary">Start call</button>
+          <button id="hang-up" class="secondary" hidden>Hang up</button>
+          <span id="call-status" class="muted"></span>
+        </div>
+        <!-- Live video from the patient's phone, with the dots drawn on top -->
+        <div id="video-box" class="video-box" hidden>
+          <video id="video" autoplay playsinline></video>
+          <canvas id="overlay"></canvas>
+        </div>
+        <p class="muted">Bridge to thumb</p>
+        <p id="distance" class="distance">–</p>
+        <p id="bridge-depth" class="muted">Phone to bridge: –</p>
+        <div class="chips">
+          <span id="chip-face" class="chip">Face</span>
+          <span id="chip-profile" class="chip">Side-on</span>
+          <span id="chip-thumb" class="chip">Thumb</span>
+          <span id="chip-camera" class="chip on">Front camera</span>
+        </div>
+        <p class="muted">Patient sees: <span id="instruction">–</span></p>
+      </div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

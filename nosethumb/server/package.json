@@ -1,0 +1,11 @@
+{
+  "name": "nosethumb-server",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Server and doctor dashboard for the NoseThumb telemedicine prototype",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "add-doctor": "node add-doctor.js"
+  }
+}

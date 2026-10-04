@@ -1,0 +1,27 @@
+# Rebuilt with `pod install` (MediaPipe frameworks are over 1 GB)
+Pods/
+
+# Python environments, caches and generated data
+.venv/
+__pycache__/
+.pytest_cache/
+recordings/
+television_recordings/
+television_history.db
+*.mov
+posecam/models/
+
+# Node
+node_modules/
+
+# Doctor accounts (hashed passwords) stay on the machine that created them
+doctors.json
+
+# Xcode per-user and build files
+xcuserdata/
+DerivedData/
+build/
+*.xcuserstate
+
+# macOS
+.DS_Store

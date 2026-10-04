@@ -1,0 +1,3 @@
+# Doctor accounts (hashed passwords) stay on this machine.
+doctors.json
+node_modules/
