@@ -46,4 +46,4 @@ Hackathon prototype. Distances have not been clinically validated; not for diagn
 
 ## Credits
 
-TeleVision and posecam were built with the HackHeal 2026 team (see the original repo `stefan-arni/hackheal2026`). NPC measurement, NoseThumb and the NPC dashboard panel by Aishwarya Patil.
+TeleVision and posecam were built with the HackHeal 2026 team.
